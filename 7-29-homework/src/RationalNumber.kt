@@ -1,13 +1,49 @@
-class RationalNumber (val numerator: Int, val denominator: Int) {
-    init {
-        numerator
-    }
-    init {
-        denominator
-    }
+package myPackage
+
+class RationalNumber (var numerator: Int, var denominator: Int) {
+//
+//    init {
+//        numerator
+//    }
+//    init {
+//        denominator
+//    }
+
+    //teacher copy doesn't has above inits
 
     override fun toString(): String {
         return ("$numerator/$denominator")
     }
 
 }
+
+
+fun toDouble (w: RationalNumber) {
+    return input.numerator.toDouble()/input.denominator.toDouble()
+}
+//
+//fun toDouble(input: RationalNumber): Double {
+//    return input.numerator.toDouble()/input.denominator.toDouble()
+//}//teacher version
+//
+
+fun add (x: RationalNumber, y: RationalNumber): Int {
+
+    val numeratorfinal = (x.numerator * y.denominator) + (y.numerator * x.denominator)
+
+    val denominatorfinal = (x.denominator * y.denominator)
+    return RationalNumber(numeratorfinal, denominatorfinal)
+}
+//
+//fun add(valueOne: RationalNumber, valueTwo: RationalNumber): RationalNumber {
+//    val numeratorOne = valueOne.numerator * valueTwo.denominator
+//    val numeratorTwo = valueTwo.numerator * valueOne.denominator
+//    val denominatorOne = valueOne.denominator * valueTwo.denominator
+//    return RationalNumber ((numeratorOne+numeratorTwo), denominatorOne)
+//}
+
+
+//can you explain why this doesn't work or what the code should be?
+//because I don't get why this doesn't work
+
+
